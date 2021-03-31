@@ -160,7 +160,7 @@ function showAsLinks(eltarget, obArray) {
                 let _add_category_item  = document.createElement('li');
                 let _add_category_child = document.createElement('ul');
                 _add_category_item.textContent = _cate;
-                _add_category_item.className   = "item_category";
+                _add_category_item.className = "item_category acd-label";
                 _add_category_child.className = "item_childs";
                 _add_category.appendChild(_add_category_item);
                 _add_category.appendChild(_add_category_child);
