@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>csv2link_items(Demo)</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <h1>csv2link_items(Demo)</h1>
+  <p>CSVファイルからリンクを作成します。<a href="assets/kanagawa_area.csv" download>こちら</a>のファイルを下のボックスにドロップしてください。</p>
+  <hr>
+  <div id="dropzone" effectAllowed="move">Drog files here!</div>
+<ul id="files"></ul>
+  <hr>
+  <p>ファイル名：<span id="fnameSpan"></span><br>
+      エンコード:<span id="encSpan"></span></p>
+  <div id="txtarea"></div>
+  <p id="encodejsError"></p>
+  <table id="show_table"></table>
+  <div id="links">
+    リンク一覧：
+  </div>
+  <script src="scripts/vendors/encoding.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
