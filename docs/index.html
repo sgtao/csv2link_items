@@ -9,8 +9,13 @@
 </head>
 <body>
   <h1>csv2link_items(Demo)</h1>
-  <p>CSVファイルからリンクを作成します。<a href="assets/kanagawa_area.csv" download>こちら</a>のファイルを下のボックスにドロップしてください。</p>
+  <p>CSVファイルからリンク一覧を作成します。</p>
   <hr>
+  <div id="links">
+    <p>リンク一覧：</p>
+  </div>
+  <hr>
+  <p>上記は、<a href="assets/kanagawa_area.csv" download>こちら</a>のファイルを読み込んで表示しています。異なる表示にするには下のボックスにドロップしてください。</p>
   <div id="dropzone" effectAllowed="move">Drog files here!</div>
 <ul id="files"></ul>
   <hr>
@@ -19,10 +24,22 @@
   <div id="txtarea"></div>
   <p id="encodejsError"></p>
   <table id="show_table"></table>
-  <div id="links">
-    リンク一覧：
-  </div>
   <script src="scripts/vendors/encoding.js"></script>
   <script src="scripts/main.js"></script>
+  <script>
+    // use fetch to retrieve the products and pass them to init
+    // report any errors that occur in the fetch operation
+    // once the products have been successfully loaded and formatted as a JSON object
+    // using response.json(), run the initialize() function
+    let filename = "assets/kanagawa_area.csv";
+    fetch(filename).then(function(response) {
+      return response.text();
+    }).then(function(textContent) {
+      showText(elTxtArea, textContent);
+    }).catch(function(err) {
+      console.log('Fetch problem: ' + err.message);
+    });
+  </script>
+
 </body>
 </html>

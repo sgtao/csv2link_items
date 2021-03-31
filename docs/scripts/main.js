@@ -5,6 +5,7 @@ const elDrop = document.getElementById('dropzone');
 const elFiles = document.getElementById('files');
 const elTxtArea = document.getElementById('txtarea');
 const elTable = document.getElementById('show_table');
+const elLinks = document.querySelector('#links');
 
 elDrop.addEventListener('dragover', function(event) {
         event.preventDefault();
@@ -131,14 +132,14 @@ function load_textfile(elTxtArea, targetFile) {
  * @param   content // CSVテキストデータ
  * @returns json_array[]
  */
-const elLinks = document.querySelector('#links');
 function showText(el, content) {
         el.textContent = content;
         // console.log(content);
         // console.log(csv2array(content));
         // showAsTable(elTable, csv2array(content));
-        console.log(csv2obarray(content));
+        // console.log(csv2obarray(content));
         // console.log(JSON.stringify(csv2obarray(content)));
+        elLinks.innerHTML = "";
         showAsLinks(elLinks, csv2obarray(content));
 }
 
@@ -167,7 +168,7 @@ function showAsLinks(eltarget, obArray) {
                 for (let i = 0; i < _find_arr.length; i++){
                         // console.log(_find_arr[i]);
                         let _ob = _find_arr[i];
-                        console.log("Object : ", _ob);
+                        // console.log("Object : ", _ob);
                         appendObject(_add_category_child, _ob);
                 }
         });
@@ -275,3 +276,7 @@ function csv2obarray(content) {
 }
 
 
+// URLを与えられて、表示をする。
+function load_fr_url(url) {
+        load_textfile(elTxtArea, url);
+}

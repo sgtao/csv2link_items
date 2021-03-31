@@ -35,6 +35,11 @@
 		padding: 1em;
 }
 
+#links {
+	& > p {
+		font-weight: 400;
+	}
+}
 .item_category {
 	list-style: none;
 	& > li {

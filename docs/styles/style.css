@@ -4,18 +4,14 @@
   color: #9c9;
   min-height: 50px;
   padding: 20px;
-  text-shadow: 1px 1px 0 #fff;
-}
-
-#dropzone.dropover {
-  background-color: #cff;
-  color: #9cc;
-}
+  text-shadow: 1px 1px 0 #fff; }
+  #dropzone.dropover {
+    background-color: #cff;
+    color: #9cc; }
 
 #files:empty::before {
   color: #ccc;
-  content: "(Files data will be shown here.)";
-}
+  content: "(Files data will be shown here.)"; }
 
 #files img {
   border: solid 1px #ccc;
@@ -24,8 +20,7 @@
   margin: 0 10px;
   max-height: 128px;
   max-width: 128px;
-  width: auto;
-}
+  width: auto; }
 
 #txtarea {
   width: 90%;
@@ -34,31 +29,23 @@
   background: black;
   color: white;
   white-space: pre;
-  padding: 1em;
-}
+  padding: 1em; }
+
+#links > p {
+  font-weight: 400; }
 
 .item_category {
-  list-style: none;
-}
-
-.item_category > li {
-  font-weight: 300;
-}
+  list-style: none; }
+  .item_category > li {
+    font-weight: 300; }
 
 .item_childs {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+  .item_childs > li {
+    list-style: none;
+    font-size: small;
+    margin-left: 2em; }
 
-.item_childs > li {
-  list-style: none;
-  font-size: small;
-  margin-left: 2em;
-}
 /*# sourceMappingURL=style.css.map */
