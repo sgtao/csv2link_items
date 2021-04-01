@@ -28,7 +28,7 @@
   <p>読込ファイル（テキスト）：</p>
   <div id="txtarea"></div>
   <hr>
-  <table id="show_table"></table>
+  <!-- <table id="show_table"></table> -->
   <script src="scripts/vendors/encoding.js"></script>
   <script src="scripts/main.js"></script>
   <script>
@@ -44,6 +44,14 @@
     }).catch(function(err) {
       console.log('Fetch problem: ' + err.message);
     });
+  </script>
+  <!-- scroll up button -->
+  <div id="page_top"><p>▲Top</p></div>      
+  <script src="./scripts/vendors/anime.min.js"></script>
+  <script src="scripts/libs/page-top.js"></script>
+  <script>
+    const btn_page_top = document.querySelector('#page_top');
+    init_page_top(btn_page_top);
   </script>
 
 </body>
